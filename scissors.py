@@ -1,0 +1,10 @@
+def scissors():
+    print("                                           ")
+    print("    * * * *        *                       ")
+    print("    * * * *      *                         ")
+    print("    * * * *    *                           ")
+    print("             *                             ")
+    print("    * * * *    *                           ")
+    print("    * * * *      *                         ")
+    print("    * * * *        *                       ")
+    print("                                           ")
