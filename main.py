@@ -4,9 +4,9 @@ from palm import palm
 import random
 
 def judgment(a):
-    if a == "石头":
+    if a == "stone":
         stone()
-    elif a == "剪刀":
+    elif a == "scissors":
         scissors()
     else:
         palm()
@@ -14,55 +14,55 @@ def judgment(a):
 number = 0
 while True:
     if number > 0:
-        c = input("要继续游戏吗？请输入n退出，输入其它继续游戏：")
+        c = input("Do you want to continue the game? Please enter n to exit, enter other to continue the game.")
         if c == "n":
             break
         else:
             number = 0
     else:
         while number == 0:
-            a = input("请出拳（石头，剪刀，布）：")
-            if a== "石头" or a== "剪刀" or a== "布":
+            a = input("Please enter stone, scissors and paper:")
+            if a== "stone" or a== "scissors" or a== "paper":
                 number += 1
             else:
-                print("输入有误，请重新输入")
-        print("--------战斗过程--------")
+                print("Is the input wrong, please re-enter")
+        print("--------Battle process--------")
         b = random.randint(1,3)
         if b == 1:
-            print("电脑出了：石头")
+            print("The computer came out: stone")
             stone()
-            print("你出了：")
+            print("You out:")
             judgment(a)
         elif b == 2:
-            print("电脑出了：剪刀")
+            print("The computer came out: scissors")
             scissors()
-            print("你出了：")
+            print("You out:")
             judgment(a)
         else:
-            print("电脑出了：布")
+            print("The computer came out: paper")
             palm()
-            print("你出了：")
+            print("You out:")
             judgment(a)
-        print("--------结果--------")
-        if a == "石头":
+        print("--------Result--------")
+        if a == "stone":
             if b == 1:
-                print("平局")
+                print("Tie")
             elif b == 2:
-                print("你赢了")
+                print("You win")
             else:
-                print("电脑赢了")
-        elif a == "剪刀":
+                print("The computer win")
+        elif a == "scissors":
             if b == 1:
-                print("电脑赢了")
+                print("The computer win")
             elif b == 2:
-                print("平局")
+                print("Tie")
             else:
-                print("你赢了")
+                print("You win")
         else:
             if b == 1:
-                print("你赢了")
+                print("You win")
             elif b == 2:
-                print("电脑赢了")
+                print("The computer win")
             else:
-                print("平局")
+                print("Tie")
         number += 1
